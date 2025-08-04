@@ -1,9 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <link rel="icon" type="image/x-icon" href="assets/SG.ico" />
+                <!-- BLOCK RIGHT CLICK -->
+        <script type="text/javascript">
+            document.onkeydown = function(){return false};
+            document.oncontextmenu = function(){return false}
+        </script>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="StyleSheet" href="assets/css/estilos.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Juegos</title>
+        <script src="functions.js"></script> 
         <script src="assets/js/block.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/link.js"></script>
+        <link rel="StyleSheet" href="assets/css/estilos.css">
     </head>
     <body>
         <header>
@@ -19,12 +31,193 @@
         <embed width="640" height="480" src="https://games.cdn.famobi.com/html5games/g/garden-bloom/v560/?fg_domain=play.famobi.com&fg_aid=A-GZD45&fg_uid=3f504f07-d674-4a4d-a02e-89e7414d8f26&fg_pid=560b8020-18cf-44b8-b867-ddf885dfa076&fg_beat=356&gd_sdk_referrer_url=https%3A%2F%2Fwww.bubbleshooter.net%2Fgarden-bloom%2F&original_ref=">
 <br><br><br>
         <embed width="640" height="480" src="https://html5.inlogic.sk/zumbamania/?partner_id=zumbamania_eijermedia">
-<br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<!-- CARRUSEL -->
+    <div id="drag-container" style="transform: rotateX(-11.9744deg) rotateY(242.306deg);">
+        <div id="spin-container" style="width: 120px; height: 170px; animation: 60s linear 0s infinite normal none running spin;">
+            <img src="https://i.ibb.co/2MrKpVt/Cover-Vinyl-Disc-FX1.png" width="500" heigth="300">
+            <img src="https://i.ibb.co/XFBnNzB/Cover-Vinyl-Disc-FX2.png" alt="" style="transform: rotateY(30deg) translateZ(320px); transition: transform 1s ease 2.75s;">
+            <img src="https://i.ibb.co/gFRmNMZ/Cover-Vinyl-Disc-FX3.png" alt="" style="transform: rotateY(60deg) translateZ(320px); transition: transform 1s ease 2.5s;">
+             <img src="https://i.ibb.co/1ZrJhV9/Cover-Vinyl-Disc-FX4.png" alt="" style="transform: rotateY(90deg) translateZ(320px); transition: transform 1s ease 2.25s;">
+            <img src="https://i.ibb.co/ws93Cv4/Cover-Vinyl-Disc-FX5.png" alt="" style="transform: rotateY(120deg) translateZ(320px); transition: transform 1s ease 2s;">
+             <img src="https://i.ibb.co/PxCWy9D/Cover-Vinyl-Disc-FX6.png" alt="" style="transform: rotateY(150deg) translateZ(320px); transition: transform 1s ease 1.75s;">
+             <img src="https://i.ibb.co/FHT49c1/Cover-Vinyl-Disc-FX7.png" alt="" style="transform: rotateY(180deg) translateZ(320px); transition: transform 1s ease 1.5s;">
+            <img src="https://i.ibb.co/8m1FVMG/Cover-Vinyl-Disc-FX8.png" alt="" style="transform: rotateY(210deg) translateZ(320px); transition: transform 1s ease 1.25s;">
+             <img src="https://i.ibb.co/mBW371C/Cover-Vinyl-Disc-FX9.png" alt="" style="transform: rotateY(240deg) translateZ(320px); transition: transform 1s ease 1s;">
+             <img src="https://i.ibb.co/sFSKy8Y/Cover-Vinyl-Disc-FX10.png" alt="" style="transform: rotateY(270deg) translateZ(320px); transition: transform 1s ease 0.75s;">
+            <img src="https://i.ibb.co/FqVHxtP/Cover-Vinyl-Disc-FX11.png" alt="" style="transform: rotateY(300deg) translateZ(320px); transition: transform 1s ease 0.5s;">
+             <img src="https://i.ibb.co/pJxJkVy/Cover-Vinyl-Disc-FX12.png" style="transform: rotateY(330deg) translateZ(320px); transition: transform 1s ease 0.25s;">
+        </div>
+        <div id="ground" style="width: 640px; height: 640px;"></div>
+    </div>
+        
+<style>
+    #drag-container,#spin-container{position: relative;display: -webkit-box;
+    display: -ms-flexbox;display: flex;margin: auto;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;
+    -webkit-transform: rotateX(-10deg);transform: rotateX(-10deg);}#drag-container img,#drag-container video{-webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;position: absolute;left: 0;top: 0;width: 110%;height: 100%;line-height: 400px;
+    font-size: 50px;text-align: center;
+    -webkit-box-shadow: 0 0 30px #9dd3fa;
+    box-shadow: 0 0 30px #9dd3fa;
+    -webkit-box-reflect: below 30px linear-gradient(transparent, transparent, #0005);
+    }#drag-container img:hover,#drag-container video:hover{-webkit-box-shadow: 0 0 55px #9dd3fa;
+    box-shadow: 0 0 55px #9dd3fa;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+    }#drag-container p{font-family: 'Anton', sans-serif;position: absolute;top: 100%;left: 60px;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);transform: translate(-50%, -50%) rotateX(90deg);color: rgb(255, 145, 0);}#ground{width: 400px;height: 400px;position: absolute;top: 100%;left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);transform: translate(-50%, -50%) rotateX(90deg);background: -webkit-radial-gradient(center center,farthest-side,#9993,transparent);
+    }#music-container{position: absolute;top: -100px;left: 0;}@-webkit-keyframes spin{from{-webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    }to{-webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);}}@keyframes spin{from{-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}to{-webkit-transform: rotateY(360deg);transform: rotateY(360deg);}}@-webkit-keyframes spinRevert{from{
+    -webkit-transform: rotateY(360deg);transform: rotateY(360deg);}to{
+    -webkit-transform: rotateY(0deg);transform: rotateY(0deg);}}@keyframes spinRevert{from{-webkit-transform: rotateY(360deg);transform: rotateY(360deg);
+    }to {-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}}
+</style>
+<script>
+      // You can change global variables here:
+      var radius = 320; // how big of the radius
+      var autoRotate = true; // auto rotate or not
+      var rotateSpeed = +60; // unit: seconds/360 degrees
+      var imgWidth = 120; // width of images (unit: px)
+      var imgHeight = 170; // height of images (unit: px)
+
+      // Link of background music - set 'null' if you dont want to play background music
+      var bgMusicURL =
+        "";
+      var bgMusicControls = true; // Show UI music control
+
+      /*
+     NOTE:
+*/
+
+      // ===================== start =======================
+      setTimeout(init, 100);
+
+      var odrag = document.getElementById("drag-container");
+      var ospin = document.getElementById("spin-container");
+      var aImg = ospin.getElementsByTagName("img");
+      var aVid = ospin.getElementsByTagName("video");
+      var aEle = [...aImg, ...aVid]; // combine 2 arrays
+
+      // Size of images
+      ospin.style.width = imgWidth + "px";
+      ospin.style.height = imgHeight + "px";
+
+      // Size of ground - depend on radius
+      var ground = document.getElementById("ground");
+      ground.style.width = radius * 2 + "px";
+      ground.style.height = radius * 2 + "px";
+
+      function init(delayTime) {
+        for (var i = 0; i < aEle.length; i++) {
+          aEle[i].style.transform =
+            "rotateY(" +
+            i * (360 / aEle.length) +
+            "deg) translateZ(" +
+            radius +
+            "px)";
+          aEle[i].style.transition = "transform 1s";
+          aEle[i].style.transitionDelay =
+            delayTime || (aEle.length - i) / 4 + "s";
+        }
+      }
+
+      function applyTranform(obj) {
+        // Constrain the angle of camera (between 0 and 180)
+        if (tY > 180) tY = 180;
+        if (tY < 0) tY = 0;
+
+        // Apply the angle
+        obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+      }
+
+      function playSpin(yes) {
+        ospin.style.animationPlayState = yes ? "running" : "paused";
+      }
+
+      var sX,
+        sY,
+        nX,
+        nY,
+        desX = 0,
+        desY = 0,
+        tX = 0,
+        tY = 10;
+
+      // auto spin
+      if (autoRotate) {
+        var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+        ospin.style.animation = `${animationName} ${Math.abs(
+          rotateSpeed
+        )}s infinite linear`;
+      }
+
+      // add background music
+      if (bgMusicURL) {
+        document.getElementById("music-container").innerHTML += `
+<audio src="${bgMusicURL}" ${
+          bgMusicControls ? "controls" : ""
+        } autoplay loop>
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+`;
+      }
+
+      // setup events
+      document.onpointerdown = function(e) {
+        clearInterval(odrag.timer);
+        e = e || window.event;
+        var sX = e.clientX,
+          sY = e.clientY;
+
+        this.onpointermove = function(e) {
+          e = e || window.event;
+          var nX = e.clientX,
+            nY = e.clientY;
+          desX = nX - sX;
+          desY = nY - sY;
+          tX += desX * 0.1;
+          tY += desY * 0.1;
+          applyTranform(odrag);
+          sX = nX;
+          sY = nY;
+        };
+
+        this.onpointerup = function(e) {
+          odrag.timer = setInterval(function() {
+            desX *= 0.95;
+            desY *= 0.95;
+            tX += desX * 0.1;
+            tY += desY * 0.1;
+            applyTranform(odrag);
+            playSpin(false);
+            if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+              clearInterval(odrag.timer);
+              playSpin(true);
+            }
+          }, 17);
+          this.onpointermove = this.onpointerup = null;
+        };
+
+        return false;
+      };
+
+      document.onmousewheel = function(e) {
+        e = e || window.event;
+        var d = e.wheelDelta / 0 || -e.detail;
+        radius += d;
+        init(1);
+      };
+    </script>
+<br><br><br><br><br><br><br><br><br>
+<!-- REPRODUCTOR -->
         <iframe scrolling="no" frameborder="0" width="700" height="600" src="https://xatradio.com/player/flg2k2lpl.html">Your browser does not support iframes!
         </iframe>
         <footer>
-            <img src="https://i.imgur.com/jYPjGyn.png" width="20" height="20"
-                 <h5>©2024</h5>
+            <a href="https://linktr.ee/XatSpace" target="_blank" rel="noreferrer">
+            <img src="https://i.imgur.com/jYPjGyn.png" width="30" height="30"
+            <p>©2024<p>
         </footer>
     </body>
 </html>
