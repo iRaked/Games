@@ -1,0 +1,184 @@
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: url('https://i.ibb.co/2YBCcwH/Cursor-Sky-FX.png'), auto;
+}
+
+/* Corrección de color para enlaces */
+a[href] {
+  color: #ffffff;
+}
+
+/* Fondo general del body */
+body {
+  background: url('https://i.ibb.co/Y8Hw6wc/Background-Casino.png');
+  background-size: cover;
+}
+
+/* Fondo de HTML (color corregido) */
+html {
+  background-color: #5157fc;
+  background-size: 100%;
+}
+
+/* Header básico */
+header {
+  width: 100%;
+  height: auto; /* corregido: era "heigth" */
+  position: relative;
+}
+
+/* Estilo para video de fondo */
+video {
+  width: 100%;
+  height: 100%; /* corregido: era "heigth" */
+  overflow: hidden;
+  opacity: 0.6;
+}
+
+/* Posicionamiento absoluto para overlays */
+.absolute {
+  width: 100%;
+  height: 100%; /* corregido */
+  top: 0;
+  right: 0; /* corregido: era "rigth" */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Título principal */
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  z-index: 100;
+  color: rgba(0, 0, 0, 0.575); /* corregido: antes era "color: background: ..." */
+  margin-bottom: 30px;
+}
+
+/* Línea decorativa debajo del h1 */
+h1::after {
+  display: block;
+  width: 30%;
+  height: 10px; /* corregido */
+  content: "";
+  margin: auto;
+  background: white;
+}
+
+/* Hover para span */
+span:hover {
+  opacity: 1;
+}
+
+/* Navegación personalizada */
+.xatstynavlink a {
+  background-color: #a5a5a5; /* corregido: doble hash */
+}
+
+/* Estilos para elementos específicos */
+#xatstymedia {
+  background: none;
+}
+
+#xatstyheader {
+  height: 40px;
+  top: 0;
+  border-radius: 0 0 15px 0;
+  background: #000000;
+  position: absolute;
+}
+
+td[bgcolor] {
+  background: #000000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 32px 0 0 0;
+}
+
+/* Ocultar elementos no deseados */
+#xatstyinfo,
+#xatstyabout0,
+#xatstysidead,
+#xatstywhatpoll,
+hr {
+  display: none;
+}
+
+/* Corrección de propiedad mal escrita */
+img {
+  opacity: 0.8;
+}
+
+img:hover {
+  opacity: 0.9;
+  -webkit-transform: rotate(360deg);
+  -webkit-filter: blur(1px);
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/* Footer centrado */
+footer {
+  text-align: center;
+}
+    
+    /* Marquesina Led */
+.marquesina-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  border-top: 4px solid #00ffff;
+  border-bottom: 4px solid #3688ff;
+  padding: 20px 0;
+}
+
+.marquesina-track {
+  display: flex;
+  animation: scrollRitual 25s linear infinite;
+}
+
+.marquesina-ritual {
+  display: inline-flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.marquesina-ritual span {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-size: 60px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #3688ff;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollRitual {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #3688ff;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+    text-shadow: 0 0 20px #743dc0, 0 0 30px #00e6e6;
+  }
+}
